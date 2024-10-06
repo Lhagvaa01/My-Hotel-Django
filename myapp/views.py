@@ -49,7 +49,7 @@ def create_user_info(request):
         try:
             hotel_owner = HotelOwner.objects.get(pk=owner_id)
         except HotelOwner.DoesNotExist:
-            return Response({"error": "Hotel owner not found."}, status=status.HTTP_404_NOT_FOUND)
+            return Response({"error": "Hotel owner not found..."}, status=status.HTTP_404_NOT_FOUND)
 
         # Validate the token
         if token != hotel_owner.token:  # Adjust this line based on your actual token storage
