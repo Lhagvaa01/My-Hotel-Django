@@ -53,7 +53,7 @@ def create_user_info(request):
 
         # Validate the token
         if token != hotel_owner.token:  # Adjust this line based on your actual token storage
-            return Response({"error": "You do not have permission to access this resource."},
+            return Response({"error": "You do not have permission to access this resource...."},
                             status=status.HTTP_403_FORBIDDEN)
 
         serializer = UserInfoSerializer(data=request.data)
